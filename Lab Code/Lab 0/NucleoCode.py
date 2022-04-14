@@ -2,6 +2,7 @@ from pyb import Pin, Timer, ADC, ExtInt, UART
 import pyb
 import micropython
 import array
+import time
 
 
 # Top level parameters
@@ -30,14 +31,14 @@ def btn_callback(line):
     global button_push
     button_push = 1         # Set global variable to 1
     
+# Define external interrupt for button    
 button_int = ExtInt(Pin.cpu.C13, ExtInt.IRQ_FALLING, Pin.PULL_NONE, btn_callback)
 
 
 # Interrupt handler for ADC sample and convert
 def adc_interrupt(tim):
     global row_idx
-#     reading = adc.read_timed(buf, tim)      # sample 100 values, taking .1s
-    reading = adc.read()
+    reading = adc.read()                    # Read the current value from the ADC
     time_array[row_idx] = row_idx           # Add current index to list
     adc_array[row_idx] = reading            # Add ADC reading to list
     row_idx += 1
@@ -45,6 +46,7 @@ def adc_interrupt(tim):
     if row_idx == len(time_array):          # Disable adc interrupt when finished
         tim.callback(None)
 
+# Define and start timer interrupt for sampling ADC
 tim = Timer(6, freq=1000)     # Create a timer running at 1 kHz
 
 
@@ -70,7 +72,7 @@ def main():
             
             # Loop until ADC array is filled
             while row_idx < len(time_array):                
-                pass        
+                pass        # Do nothing
             
 
             PC1.low()       # Clear output back to LOW
@@ -78,16 +80,15 @@ def main():
             
             # Print results of data collection
             for i in range(len(time_array)):
-                print(str(time_array[i])+',', adc_array[i])
-                ser.write(str(time_array[i])+','+str(adc_array[i])+'\r\n')
+                print(str(time_array[i])+',', adc_array[i])     # Print coords in REPL
+                ser.write(str(time_array[i])+','+str(adc_array[i])+'\r\n')  # Send data over serial prot
+                time.sleep(0.001)
                 
-            
     
+# Run main function    
 if __name__ == '__main__':
     main()
 
     
 
     
-
-
