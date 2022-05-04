@@ -33,8 +33,9 @@ def dg_dtheta(theta):
     dy_dtheta1 = l1 * math.cos(theta1)
     dy_dtheta2 = l3 * math.cos(theta2 - 180)
     
-    return -1 * [[dx_dtheta1, dx_dtheta2], [dy_dtheta1, dy_dtheta2]]
-    
-    
+    return -1 * np.asarray([[dx_dtheta1, dx_dtheta2], [dy_dtheta1, dy_dtheta2]])
 
+def NewtonRaphson(fcn, jacobian, guess, thresh):
+    while thresh > 
+        th_new = th_old - np.linalg.inv(jacobian) * fcn
 
