@@ -4,7 +4,7 @@
 
 ## Hardware Design
 
-!(https://github.com/alaurin10/ME405/blob/main/docs/main_structure.jpg)
+![](https://github.com/alaurin10/ME405/blob/main/docs/main_structure.jpg)
 
 ### Bill of Materials
 
