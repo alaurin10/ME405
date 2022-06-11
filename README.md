@@ -35,6 +35,8 @@ Figure 1: Pen Plotter
 
 ## Hardware Design and Considerations
 
+Originally, our design would raise and lower the entire plotter with the pen attached to allow for multiple lines while drawing. Since the pen is attached at the end of a slender plastic rod, it was unfeasible to attach a mechanism that would only lift the pen. Instead, a DC motor would be attached at the base of the plotter and rotate a cam that would lift the plotter along a rod. Our original cam design caused problems, however, as we found that the motor needed to spin at nearly 100% to go from the down position to the up position, and the up position was at such a small range of the cam, that even by using encoders, after three or four cycles of up/down, the cam orientation would be off, and the plotter would not be able to rise. Our second cam design made use of an ellipse, hoping to allow for smoother transition between the up and down motions, but the motor was unable to provide enough torque, even at max speed, to lift the plotter. 
+
 
 ### Bill of Materials
 
