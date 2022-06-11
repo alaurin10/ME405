@@ -6,9 +6,35 @@ The goal of this project was to create a pen plotter with 2.5 degrees of freedom
 a 2D plane (2 degrees of freedom) with an additional pen-up and pen-down movement (half a degree of freedom). This design was 
 a compact two arm linkage which was actuated by two stepper motors and a scissor lift.
 
-## Hardware Design
- 
+The video demo of the project can be seen [here](https://drive.google.com/file/d/1AHaPgYhn4Wa2hROuMRt8auDsZj5_-b34/view?usp=sharing)
+
+### Hardware Overview
+
+As shown in Figure 1, the plotter uses a two arm linkage and two stepper motors to plot in the xy-plane. 
+***ADD MORE TO THIS SECTION***
+- TMC4210
+- Stepper motors
+
+### Software Overview
+
+The pen plotter makes use of a cooperative multitaking architecture to process and plot images. Drawings are uploaded as HPGL files, 
+which are processed by the device to actuate the motors. There are two methods that are used to actuate the drawing of the plotter: 
+interpolation and the Newton-Raphson root finding algorithm.
+
+Interpolation is used to draw straight lines. Since both stepper motors will not turn at the same speed, it is likely that straight lines
+will become curved. To remedy this, interpolation is used to break long distances in between coordinates up into smaller steps so that 
+the motors will be able to move together.
+
+Next is the algorithm to find the desired angles of the motors. HPGL files designate an xy-coordinate, but the plotter is actuated by two
+angles that create an xy-coordinate. Finding these angles is a matter of inverse kinematics, which are implemented using the Newton-Raphson
+root finding algorithm. Given a desired x and y coordinate pair, the algorithm determines which angle each motor should be at to move the 
+pen to the desired location.
+
 ![](https://github.com/alaurin10/ME405/blob/main/docs/structure.jpg)
+Figure 1: Pen Plotter
+
+## Hardware Design and Considerations
+
 
 ### Bill of Materials
 
@@ -34,7 +60,8 @@ a compact two arm linkage which was actuated by two stepper motors and a scissor
 | 1 | MAX98357A | Team Member | - |
 | 1 | Speaker | Team Member | - |
 
-## Software Design
+## Software Design and Considerations
 
-Here's an example link [here](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax)
+
+## Results
 
