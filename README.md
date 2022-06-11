@@ -7,7 +7,7 @@ a 2D plane (2 degrees of freedom) with an additional pen-up and pen-down movemen
 a compact two arm linkage which was actuated by two stepper motors and a scissor lift.
 
 ## Hardware Design
-
+ 
 ![](https://github.com/alaurin10/ME405/blob/main/docs/main_structure.jpg)
 
 ### Bill of Materials
