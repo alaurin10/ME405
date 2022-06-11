@@ -10,9 +10,12 @@ The video demonstration of the project can be seen [here](https://drive.google.c
 
 ### Hardware Overview
 
-As shown in Figure 1, the plotter uses a two arm linkage and two stepper motors to plot in the xy-plane. Two stepper motors are used to
-control the angles of the arms, thereby controlling the position of the pen. The stepper motors are controlled with an external device, the
-TMC4210. For the pen-up and the pen-down motion, a DC motor and a scissor lift is used to move the paper up and down to the tip of the pen.
+As shown in Figure 1, the plotter is a compact design that uses a two arm bar linkage and two stepper motors to plot in the xy-plane. Two stepper
+motors are used to control the angles theta of the arms, thereby controlling the position of the pen. Two gears were used to link the actuation of the 
+motors and the arms, which included a driver gear and a driven gear. The driver gear attached to the motor had 48 teeth and the driven gear had 32 teeth, 
+which produced an output increment of 1.5 times the input. Most of the component of the device were 3D printed, except the bearing in the arms and the two 
+links, which were manufactured out of aluminum and the gears. The stepper motors are controlled with an external device, the TMC4210. For the pen-up and 
+the pen-down motion, a DC motor and a scissor lift is used to move the paper up and down to the tip of the pen. Most of the 
 
 ### Software Overview
 
