@@ -15,7 +15,7 @@ motors are used to control the angles of the arms, thereby controlling the posit
 motors and the arms, which included a driver gear and a driven gear. The driver gear attached to the motor had 48 teeth and the driven gear had 32 teeth, 
 which produced an output increment of 1.5 times the input. Most of the component of the device were 3D printed, except the bearing in the arms and the two 
 links, which were manufactured out of aluminum and the gears. The stepper motors are controlled with an external device, the TMC4210. For the pen-up and 
-the pen-down motion, a DC motor and a scissor lift is used to move the paper up and down to the tip of the pen. Most of the 
+the pen-down motion, a DC motor and a scissor lift is used to move the paper up and down to the tip of the pen.
 
 ### Software Overview
 
