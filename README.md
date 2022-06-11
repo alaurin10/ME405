@@ -8,7 +8,7 @@ a compact two arm linkage which was actuated by two stepper motors and a scissor
 
 ## Hardware Design
 
-![](https://github.com/alaurin10/ME405/blob/main/docs/main_structure.jpg)
+![](https://github.com/alaurin10/ME405/blob/main/docs/main_structure.jpg = 250x250)
 
 ### Bill of Materials
 
@@ -18,20 +18,17 @@ a compact two arm linkage which was actuated by two stepper motors and a scissor
 | 1  | Nucleo Board with Shoe| ME405 Class | - |
 | 2 | Jutagoss Motor GA12-N20 DC Gear Motor | Amazon | $27.38 |
 | 1 | Pen | Team Member | - |
-| :--: | :-------: | :----: | :-----: |
 | 1 | PLA 3D Filament | Team Member | - |
 | 8 | M3-8mm Screws | School Shop | - |
 | 2 | KHK-BSS0.5-60B Gears | khk.gears.us | $20.75 |
 | 3 | 1601 Series Flanged Ball Bearing | Servo City | $6.38 |
 | 2 | 5mm Stainless Steel Shafting | Servo City | $2.88 |
-| :--: | :--: | :--: | :--: |
 | 8 | M4 x 17mm Screws | Team Member | - |
 | 4 | M4 x 10mm Screws | Team Member | - |
 | 1 | Guide Rails System | Team Member | - |
 | 1 | Platform | Team Member | - |
 | 1 | 3D Printed Base | Team Member | - |
 | 1 | 3D Printed Arm | Team Member | - |
-| :--: | :--: | :--: | :--: |
 | 1 | Raspberry Pi Pico | Team Member | - |
 | 1 | NeoPixel RGBW Flex Strip | Team Member | - |
 | 1 | MAX98357A | Team Member | - |
