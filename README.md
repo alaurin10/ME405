@@ -8,14 +8,14 @@ a compact two arm linkage which was actuated by two stepper motors and a scissor
 
 The video demo of the project can be seen [here](https://drive.google.com/file/d/1AHaPgYhn4Wa2hROuMRt8auDsZj5_-b34/view?usp=sharing)
 
-#### Hardware Overview
+### Hardware Overview
 
 As shown in Figure 1, the plotter uses a two arm linkage and two stepper motors to plot in the xy-plane. 
 ***ADD MORE TO THIS SECTION***
 - TMC4210
 - Stepper motors
 
-#### Software Overview
+### Software Overview
 
 The pen plotter makes use of a cooperative multitaking architecture to process and plot images. Drawings are uploaded as HPGL files, 
 which are processed by the device to actuate the motors. There are two methods that are used to actuate the drawing of the plotter: 
@@ -36,7 +36,7 @@ Figure 1: Pen Plotter
 ## Hardware Design and Considerations
 
 
-#### Bill of Materials
+### Bill of Materials
 
 | Qty. | Part                 | Vendor           | Est. Price  |
 | :--: | :-----------:        | :-------------:  | :---------: |
