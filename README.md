@@ -8,7 +8,7 @@ a compact two arm linkage which was actuated by two stepper motors and a scissor
 
 ## Hardware Design
  
-![](https://github.com/alaurin10/ME405/blob/main/docs/main_structure.jpg)
+![]([https://github.com/alaurin10/ME405/blob/main/docs/main_structure.jpg](https://github.com/alaurin10/ME405/blob/main/docs/structure.jpg))
 
 ### Bill of Materials
 
